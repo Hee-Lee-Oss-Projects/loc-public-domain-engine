@@ -15,7 +15,7 @@
   "outputLicense": "CC0-1.0",
   "acceptanceCriteria": [
     "At least one named downstream consumer or external steward has formally committed to adopt and sustain the feed; the commitment is documented.",
-    "At least one downstream Elyos project has actually shipped artifacts derived from cleared items to beneficiaries; the delivery is documented.",
+    "At least one downstream Hee-Lee Oss project has actually shipped artifacts derived from cleared items to beneficiaries; the delivery is documented.",
     "The LoC Labs engagement outcome is recorded honestly (committed, in-conversation, or no-response, whichever is true).",
     "The By the People engagement outcome is documented honestly.",
     "The partner commitment document is committed as a permanent record."
@@ -25,7 +25,7 @@
     "https://crowd.loc.gov/"
   ],
   "status": "open",
-  "context": "Per Elyos delivered means not merged: the project is not shipped until a committed downstream consumer/steward is secured and at least 1 downstream project actually ships artifacts to beneficiaries. This task finalizes partner engagement, secures a commitment, and documents the LoC Labs outcome honestly including no response if that is the case. Depends on partner-002. See PLAN.md (M3 exit criterion d).",
+  "context": "Per Hee-Lee Oss delivered means not merged: the project is not shipped until a committed downstream consumer/steward is secured and at least 1 downstream project actually ships artifacts to beneficiaries. This task finalizes partner engagement, secures a commitment, and documents the LoC Labs outcome honestly including no response if that is the case. Depends on partner-002. See PLAN.md (M3 exit criterion d).",
   "objective": "Secure a formal commitment from at least 1 downstream consumer or external steward, document at least 1 downstream project shipping artifacts to beneficiaries, and record the LoC Labs engagement outcome honestly.",
   "type": "research",
   "urgent": false,

@@ -23,10 +23,10 @@ public good:
 1. **Rights are ambiguous and per-item.** LoC attaches rights/access statements at the item and
    collection level, but explicitly tells users that **the final legal assessment of whether an item
    may be reused is the user's responsibility, not LoC's.** Naively treating "it's on loc.gov" as "it's
-   public domain" is exactly the mistake that produces license violations — an Elyos hard-refusal.
+   public domain" is exactly the mistake that produces license violations — a Hee-Lee Oss hard-refusal.
 2. **Bulk programmatic access is easy to abuse.** A fan-out engine that crawls per-item can trivially
    exceed LoC's published rate limits, degrade a public service for everyone, and get the project (and
-   Elyos) blocked. Politeness is not optional; it is an engineering requirement and an ethical one.
+   Hee-Lee Oss) blocked. Politeness is not optional; it is an engineering requirement and an ethical one.
 
 This project builds the **agent-neutral spine** that solves both: a conservative, auditable
 **rights-gate** that maps LoC/rightsstatements.org/Creative Commons rights metadata to a small
@@ -35,10 +35,10 @@ allow-list of "fan-out eligible" determinations (deny-by-default, ambiguity → 
 published policy, exponential backoff with jitter on 429/5xx, a circuit breaker, and a descriptive
 contact User-Agent). Every cleared item emits a **frozen provenance manifest** (the exact API
 response, the rights field, a retrieval timestamp, a content hash) and a typed **"cleared item"
-contract** that downstream Elyos projects consume.
+contract** that downstream Hee-Lee Oss projects consume.
 
 The engine does **not** itself do the transcription/translation/alt-text work — it *feeds* the
-existing Elyos lanes (`a11y-alttext-commons`, `public-domain-translations`, `caption-commons`,
+existing Hee-Lee Oss lanes (`a11y-alttext-commons`, `public-domain-translations`, `caption-commons`,
 `civic-open-data`) with rights-cleared, provenance-stamped source material. M0 is the spine: the
 rights-gate + the API protocol. Later milestones wire the fan-out to real downstream consumers and
 secure a steward.
@@ -69,18 +69,18 @@ rights-clearing and API etiquette badly; LoC bears the load of uncoordinated cra
   uncoordinated crawling and can contribute corrected transcriptions back.
 
 **Verified need.** The *gap* (no shared, conservative rights-gate + polite fan-out exists, and
-downstream Elyos projects need rights-cleared source material) is real and demonstrable, and
+downstream Hee-Lee Oss projects need rights-cleared source material) is real and demonstrable, and
 sister projects in the portfolio (`a11y-alttext-commons`, `public-domain-translations`,
 `caption-commons`) are concrete internal consumers. However, a **named external partner/steward who
 will adopt and sustain the engine — ideally LoC Labs or a library/accessibility org — is TO BE
-SECURED.** Per the Elyos quality bar ("delivered, not merged"), securing a last-mile consumer (even
-an internal Elyos project committing to *adopt the feed*) is a first-class M1/M2 objective and a
+SECURED.** Per the Hee-Lee Oss quality bar ("delivered, not merged"), securing a last-mile consumer (even
+an internal Hee-Lee Oss project committing to *adopt the feed*) is a first-class M1/M2 objective and a
 precondition for declaring the project *shipped*.
 
 **Partner org.** TO BE SECURED. Candidate stewards/partners: **LoC Labs** (for API-etiquette
 guidance and possible collaboration), the **"By the People" / Concordia** crowd-transcription
 program (align, don't duplicate), a university **digital-humanities** center, **Wikimedia / Wikisource**
-communities, and an **accessibility organization**. Internal Elyos consumers are the immediate,
+communities, and an **accessibility organization**. Internal Hee-Lee Oss consumers are the immediate,
 committed adopters; an external steward is the ideal long-term owner.
 
 ## Goals and non-goals
@@ -94,7 +94,7 @@ committed adopters; an external steward is the ideal long-term owner.
   User-Agent.
 - Emit a **frozen provenance manifest** per cleared item (raw API response snapshot + rights field +
   retrieval timestamp + content hash) so every downstream artifact is reproducible and auditable.
-- Define a typed **"cleared item" fan-out contract** (JSON-LD) that downstream Elyos projects
+- Define a typed **"cleared item" fan-out contract** (JSON-LD) that downstream Hee-Lee Oss projects
   consume, and **wire at least one real downstream lane** end-to-end.
 - Add a **cultural-sensitivity / privacy screen** distinct from the rights-gate (PD ≠ ethically clear).
 - Publish a **transparent quarantine ledger** (counts and reasons for exclusion) so the gate's
@@ -107,7 +107,7 @@ committed adopters; an external steward is the ideal long-term owner.
 - **Not** a tool that *guesses* rights or "best-effort" clears ambiguous items. **No determination,
   no fan-out** — full stop.
 - **Not** itself the transcription/OCR/alt-text/translation engine; those live in the respective
-  Elyos projects. This project is the **rights-gate + protocol + fan-out**.
+  Hee-Lee Oss projects. This project is the **rights-gate + protocol + fan-out**.
 - **Not** a crawler that ignores LoC's rate limits or robots/crawl policy to maximize coverage.
 - **Not** a collector of controlled-access, restricted, or rights-encumbered LoC material, nor of
   personally identifiable data about living people.
@@ -153,7 +153,7 @@ clear. The cultural-sensitivity screen draws its own stratified sample.
 - Provenance manifests (frozen API snapshots, rights field, timestamp, content hash) and the
   reproducibility store.
 - The typed "cleared item" fan-out contract (JSON-LD) and adapters that hand items to downstream
-  Elyos projects.
+  Hee-Lee Oss projects.
 - The cultural-sensitivity / privacy screen and the public quarantine ledger.
 - Wiring **at least one** downstream lane (alt-text or transcription) end-to-end to a real consumer.
 
@@ -162,7 +162,7 @@ clear. The cultural-sensitivity screen draws its own stratified sample.
   CDN for LoC's assets.
 - **Any "best-effort" or heuristic clearing of ambiguous items.** Undetermined rights = ineligible.
 - **Performing the downstream work itself** (the actual alt-text/transcription/translation/dataset
-  authoring lives in the respective Elyos projects).
+  authoring lives in the respective Hee-Lee Oss projects).
 - **Ingesting controlled-access, restricted, or rights-undetermined LoC items**, or any
   personally-identifiable data about living people.
 - **Crawling that ignores LoC's published rate-limit/robots/crawl policy.**
@@ -171,7 +171,7 @@ clear. The cultural-sensitivity screen draws its own stratified sample.
 
 ## Solution approach & architecture
 
-An **agent-neutral pipeline + library** (per Elyos: lives in core/adapters, no vendor-specific
+An **agent-neutral pipeline + library** (per Hee-Lee Oss: lives in core/adapters, no vendor-specific
 logic), not a hosted service. The donated lane runs it; humans run their own agents.
 
 **Pipeline stages**
@@ -212,14 +212,14 @@ logic), not a hosted service. The donated lane runs it; humans run their own age
    courtesy attribution line. Idempotent: keyed by LoC item ID + content hash so a re-run never
    spawns duplicate downstream tasks.
 7. **Adapters → downstream lanes.** Thin adapters translate a cleared-item record into the right
-   downstream Elyos project's intake (alt-text → `a11y-alttext-commons`; text → `public-domain-
+   downstream Hee-Lee Oss project's intake (alt-text → `a11y-alttext-commons`; text → `public-domain-
    translations` / transcription; AV → `caption-commons`; structured → `civic-open-data`). Routing is
    suggested by media type + language; the downstream project owns its own domain review.
 8. **Quarantine ledger + metrics.** Every non-cleared item is logged with its reason; aggregate
    counts (by rights category) are published so the gate's conservatism is transparent and auditable.
 
 **Tech stack**
-- TypeScript, ESM, pnpm (Elyos conventions). Agent-neutral logic in `core`; anything tool-specific in
+- TypeScript, ESM, pnpm (Hee-Lee Oss conventions). Agent-neutral logic in `core`; anything tool-specific in
   `adapters/`.
 - HTTP client with throttling/caching (e.g., a token-bucket + conditional-request layer); local cache
   store keyed by URL + ETag.
@@ -315,7 +315,7 @@ Each entry lives in `rights/vocabulary.yml` with the source value, the determina
    vocabulary ruleset itself) signs off the `rights/vocabulary.yml` mapping and adjudicates every
    `needs-review` item. **No item is fanned out without an `eligible` determination produced by the
    approved ruleset.** Any task proposing to clear ambiguous items by heuristic, or to crawl past
-   LoC's limits, is **refused and flagged** per Elyos guardrails.
+   LoC's limits, is **refused and flagged** per Hee-Lee Oss guardrails.
 2. **Cultural-sensitivity / privacy review.** Flagged sensitive or living-person items are held until
    a reviewer (Indigenous-data / ethics competence where relevant) clears or excludes them.
 3. **Politeness review.** The protocol's compliance with LoC's published limits is verified; the
@@ -329,7 +329,7 @@ fanned-out items carrying a frozen provenance manifest**; **zero confirmed wrong
 stratified rights audit; a transparent quarantine ledger; the cultural-sensitivity screen operational;
 **≥2 downstream lanes wired** and **≥1 downstream project actually shipping artifacts** derived from
 the feed; full compliance with LoC's published rate-limit policy; and **≥1 committed downstream
-consumer/steward** with LoC Labs engagement documented. Per Elyos, *delivered ≠ merged*.
+consumer/steward** with LoC Labs engagement documented. Per Hee-Lee Oss, *delivered ≠ merged*.
 
 **Per-deed Definition of Done.** Acceptance criteria met + CI green (schema + provenance-completeness
 + rights-gate golden tests) + rights review passed + cultural/privacy screen passed + politeness
@@ -372,7 +372,7 @@ Exit criteria:
 Goal: turn cleared items into a typed feed a real downstream project consumes.
 Exit criteria:
 (a) the **"cleared item" JSON-LD contract** finalized + schema-validated, idempotent/dedup-keyed;
-(b) ≥1 downstream adapter built (alt-text or transcription) and **one downstream Elyos project
+(b) ≥1 downstream adapter built (alt-text or transcription) and **one downstream Hee-Lee Oss project
   consuming the feed**;
 (c) attribution + jurisdiction + license-basis correctly propagated into downstream intake;
 (d) re-verification (TTL) job operational. Depends on M1.
@@ -391,7 +391,7 @@ Exit criteria:
 ## Work breakdown
 
 The itemized, schema-mapped backlog lives in [`TASKS.md`](./TASKS.md), organized by the milestones
-above (M0–M3) plus a sized backlog. Each task maps to an Elyos Task JSON and carries a type, size,
+above (M0–M3) plus a sized backlog. Each task maps to a Hee-Lee Oss Task JSON and carries a type, size,
 risk tier, deliverable, dependencies, and reviewer. M0 deliberately front-loads the **rights-gate**
 and the **polite protocol** before any corpus or fan-out work begins — the spine before the fan-out.
 
@@ -403,19 +403,19 @@ and the **polite protocol** before any corpus or fan-out work begins — the spi
   adjudicates `needs-review` items, and holds veto over any clear. Mandatory (medium risk; primary
   gate). **Naming a qualified person is a hard M0 exit criterion.** **Documented fallback if the seat
   is empty:** no determination advances past `needs-review`, no item is fanned out, M0 cannot exit;
-  the maintainer escalates to Elyos governance/board (and may engage pro-bono counsel) before any
+  the maintainer escalates to Hee-Lee Oss governance/board (and may engage pro-bono counsel) before any
   fan-out proceeds.
 - **Cultural-sensitivity / privacy reviewer:** TBD — competence in Indigenous-data / ethical-archive
   norms where relevant; clears or excludes flagged items.
 - **Politeness / infra owner:** TBD — owns `loc-policy.yml` accuracy, the circuit breaker, and
   monitoring of LoC compliance.
-- **Downstream lane reviewers:** owned by the consuming Elyos projects (alt-text, translation,
+- **Downstream lane reviewers:** owned by the consuming Hee-Lee Oss projects (alt-text, translation,
   transcription, dataset) — each enforces its own domain/expert review.
 - **Steward (last-mile owner):** the downstream consumer or external partner who adopts and sustains
-  the feed. **TO BE SECURED** — required for "shipped." Internal Elyos consumers are the immediate
+  the feed. **TO BE SECURED** — required for "shipped." Internal Hee-Lee Oss consumers are the immediate
   committed adopters.
 - **LoC Labs liaison:** TBD — owns API-etiquette guidance and possible collaboration.
-- **Elyos governance/board:** arbiter for edge cases (borderline rights category, sensitive-material
+- **Hee-Lee Oss governance/board:** arbiter for edge cases (borderline rights category, sensitive-material
   call) under the published conflict-of-interest/veto checklist.
 
 ## Dependencies & integrations
@@ -425,9 +425,9 @@ and the **polite protocol** before any corpus or fan-out work begins — the spi
 - **rightsstatements.org** vocabulary and **Creative Commons** license URIs (rights mapping).
 - **schema.org / Dublin Core / IIIF** (cleared-item contract alignment).
 - **Local TK Labels references** (cultural-sensitivity screen).
-- **Downstream Elyos projects** — `a11y-alttext-commons`, `public-domain-translations`,
+- **Downstream Hee-Lee Oss projects** — `a11y-alttext-commons`, `public-domain-translations`,
   `caption-commons`, `civic-open-data` (consumers of the fan-out feed).
-- **Elyos pieces:** Task schema (`packages/schema`), agent-neutral core (`packages/core`,
+- **Hee-Lee Oss pieces:** Task schema (`packages/schema`), agent-neutral core (`packages/core`,
   `packages/cli`), adapters pattern, governance proposal/registry process. Donated lane — humans run
   their own agents; the CLI never runs headless. Any future metered OCR/translation run would use the
   **funded** lane (`packages/runner`) with a hard per-task budget cap.
@@ -443,7 +443,7 @@ and the **polite protocol** before any corpus or fan-out work begins — the spi
 | LoC revises rights metadata after we cleared an item (stale clear) | Medium | High | **Determination TTL** + re-verification job; frozen snapshot records what was true at clear time; manifest cites *our* conservative ruleset, not LoC | Maintainer |
 | PD-but-sensitive material (Indigenous/TK, human remains, living-person data) fanned out | Medium | High (ethical/privacy) | Cultural-sensitivity/privacy screen **separate from** rights; TK-label/community-provenance checks; flagged items held for review; no living-person PII | Cultural/privacy reviewer |
 | PD original wrapped in a third party's copyrighted digitization/restoration | Medium | High | Determination concerns the **specific digital object** LoC serves; verify per object, not per original's age; record in manifest | Rights reviewer |
-| No committed downstream consumer/steward → "delivered ≠ merged" not met | High | High | Internal Elyos consumers committed as immediate adopters; partner outreach an M1/M2 deliverable; status logged honestly | Maintainer |
+| No committed downstream consumer/steward → "delivered ≠ merged" not met | High | High | Internal Hee-Lee Oss consumers committed as immediate adopters; partner outreach an M1/M2 deliverable; status logged honestly | Maintainer |
 | Date-based PD inference used to fill a metadata gap (wrong clear) | Medium | High | Pre-1929 determination allowed **only** with affirmative, unambiguous date in the item's own metadata; inference forbidden; covered by golden tests | Rights reviewer |
 | Jurisdiction confusion ("PD in U.S." reused where still in copyright) | Medium | Medium | Contract records determination **jurisdiction** (default U.S.); downstream warning; reusers advised to re-verify locally | Maintainer |
 | Reviewer capacity exhausted (rights + cultural review become bottleneck) | Medium | High | Sampling-based audit (not 100% manual re-check); reviewer rotation + response-time SLA; **throughput ceiling** throttles intake when review backlog exceeds it | Maintainer |
@@ -457,7 +457,7 @@ and the **polite protocol** before any corpus or fan-out work begins — the spi
   *compliance* (wrong rights clear), *politeness* (over-crawling a public service), and *ethics*
   (sensitive cultural / living-person material) — addressed by the gates above.
 - **Secrets handling:** LoC public APIs need no auth key; any future credential (e.g., a partner data
-  feed) stays out of logs, receipts, and commits per Elyos rules. The donated lane never runs headless
+  feed) stays out of logs, receipts, and commits per Hee-Lee Oss rules. The donated lane never runs headless
   or authenticates an agent. The funded lane (if used for OCR/translation) runs only via
   `packages/runner` under a hard budget cap.
 - **PII:** no living-person personal data is collected or fanned out, regardless of PD status; the
@@ -468,7 +468,7 @@ and the **polite protocol** before any corpus or fan-out work begins — the spi
 
 ## Sustainability & maintenance
 
-- **After delivery,** the maintainer plus the secured steward/consumer own the feed; downstream Elyos
+- **After delivery,** the maintainer plus the secured steward/consumer own the feed; downstream Hee-Lee Oss
   projects own their derivatives. The rights-vocabulary table and `loc-policy.yml` are **versioned and
   dated**, with a scheduled review (LoC policy + U.S. PD rolling date change annually).
 - **Rights freshness:** the **determination TTL + re-verification job** keeps clears from going stale;
@@ -487,7 +487,7 @@ and the **polite protocol** before any corpus or fan-out work begins — the spi
 ## Open questions
 
 - Who is the committed downstream consumer / external steward? (TO BE SECURED — blocks "shipped." An
-  internal Elyos project committing to adopt the feed is the minimum bar.)
+  internal Hee-Lee Oss project committing to adopt the feed is the minimum bar.)
 - Will **LoC Labs** engage on API etiquette / collaboration, and will **"By the People"** accept
   contributed transcriptions back? (Outcomes recorded honestly, incl. "no response.")
 - Exact current LoC per-endpoint rate limits and which **bulk/sitemap** offerings exist — verified and
@@ -502,7 +502,7 @@ and the **polite protocol** before any corpus or fan-out work begins — the spi
 
 - Project proposal: `governance/proposals/loc-public-domain-engine.md` — **does not yet exist
   (TO BE WRITTEN);** this plan is ahead of the proposal and should be reconciled with it.
-- Elyos work rules: `CLAUDE.md`
+- Hee-Lee Oss work rules: `CLAUDE.md`
 - Good Deed Definition & risk tiers: `docs/good-deed-definition.md`
 - Task JSON schema: `packages/schema/src/schemas.ts`
 - Portfolio roadmap: `planning/ROADMAP.md`
@@ -511,7 +511,7 @@ and the **polite protocol** before any corpus or fan-out work begins — the spi
 - rightsstatements.org vocabulary; Creative Commons licenses; Traditional Knowledge (TK) Labels
 - LoC Labs; "By the People" / Concordia crowd-transcription platform
 - schema.org, Dublin Core, IIIF (cleared-item contract alignment)
-- Downstream Elyos projects: `a11y-alttext-commons`, `public-domain-translations`, `caption-commons`,
+- Downstream Hee-Lee Oss projects: `a11y-alttext-commons`, `public-domain-translations`, `caption-commons`,
   `civic-open-data`
 
 ---
@@ -547,7 +547,7 @@ retained here so the strengthening is visible and auditable.
 12. **Traditional Knowledge (TK) Labels** check for Indigenous materials, with hold-for-review.
 13. **Living-person PII exclusion** regardless of PD status. *(Security & privacy, Non-goals.)*
 14. **Typed JSON-LD "cleared item" fan-out contract** aligned to schema.org/Dublin Core/IIIF so
-    downstream Elyos projects *and the wider commons* can ingest it. *(Architecture §6.)*
+    downstream Hee-Lee Oss projects *and the wider commons* can ingest it. *(Architecture §6.)*
 15. **Idempotent, dedup-keyed fan-out** (LoC item ID + content hash) so re-runs never spawn duplicate
     downstream tasks. *(Architecture §6, Risks.)*
 16. **Named internal downstream consumers** (`a11y-alttext-commons`, `public-domain-translations`,

@@ -86,7 +86,7 @@ open questions flag only weakly.
 OCR** for its newspapers; Internet Archive already has OCR for millions of books; Newspaper Navigator
 already extracted 1.56M+ images with captions. The plan's fan-out could spend escrow/volunteer effort
 re-OCRing or re-captioning material that is already transcribed. There is no "is this already done
-upstream?" gate before fan-out — a real waste and arguably a "verified need" failure per Elyos.
+upstream?" gate before fan-out — a real waste and arguably a "verified need" failure per Hee-Lee Oss.
 
 **I. Smaller items:** (1) the proposal file `governance/proposals/loc-public-domain-engine.md`
 **does not exist** (plan admits it leads the proposal) — a process gap. (2) "Owner: TBD" and
@@ -217,7 +217,7 @@ API-native rights signal.
 4. **Agent-neutral, open, non-commercial infra (MIT code / CC0 outputs).** Transkribus is paid;
    FromThePage is SaaS. Being free, open, and explicitly non-profit aligns with GLAM values and lets
    Wikisource/IA/Wikimedia ingest outputs without licence friction.
-5. **Network-effect spine.** One rights-gate feeds *many* Elyos lanes; each new downstream lane makes
+5. **Network-effect spine.** One rights-gate feeds *many* Hee-Lee Oss lanes; each new downstream lane makes
    the shared gate more valuable. Competitors are vertically siloed; this is horizontal infra.
 6. **Human-in-the-loop on rights by design** (the `needs-review` middle state + counsel-reviewed
    vocabulary). The defensible claim "no AI ever decides public-domain status here" is exactly what
@@ -291,7 +291,7 @@ caching for cost control, structured/JSON output) measurably improves the produc
    conservative external baseline (DPLA/Europeana rights mappings) as a clearly-labeled interim
    ruleset, with counsel review as an upgrade, not a blocker.
 9. **Add prompt caching + Batch API + per-task token caps** to every Claude-assisted lane; emit a
-   public cost-per-cleared-item / cost-per-delivered-artifact figure (fits Elyos's funded-lane
+   public cost-per-cleared-item / cost-per-delivered-artifact figure (fits Hee-Lee Oss's funded-lane
    ledger ethos).
 10. **Add a beneficiary-acceptance metric** (transcriptions accepted by a target sink such as
     Wikisource; alt-text rated useful by a screen-reader user) so success is measured at delivery,
@@ -311,7 +311,7 @@ caching for cost control, structured/JSON output) measurably improves the produc
 
 **Perpendicular (downstream products built on the cleared feed):**
 - **Cleared-item MCP server.** Expose the rights-cleared, provenance-stamped feed as an **MCP server**
-  so *any* agent (Claude Desktop, IDEs, other Elyos lanes) can query "give me cleared PD images about
+  so *any* agent (Claude Desktop, IDEs, other Hee-Lee Oss lanes) can query "give me cleared PD images about
   X with manifests" — turning the gate into infrastructure other AI workflows pull from. High
   multiplier, low marginal cost.
 - **A "PD provenance badge" / verification widget** institutions embed to show an item passed an
@@ -347,7 +347,7 @@ goodwill (the partnership flywheel).
    (unpublished, foreign/URAA, sound recordings) — and remove the hardcoded "1929."
 7. **TK/cultural screen:** given TK Labels are community-applied via Local Contexts and rarely
    present in LoC metadata, what collection-level heuristics + human review replace a label lookup?
-8. **First committed consumer/steward:** which Elyos lane (alt-text? translation?) commits to consume
+8. **First committed consumer/steward:** which Hee-Lee Oss lane (alt-text? translation?) commits to consume
    the feed at M2, and what is the LoC Labs engagement status?
 9. **Funded-lane economics:** what is the target cost-per-delivered-artifact, and the hard per-task
    `fundedBudgetUsd` cap for the Claude-assisted lanes?

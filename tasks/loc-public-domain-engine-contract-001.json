@@ -9,7 +9,7 @@
   ],
   "requestor": "jdev1977",
   "output": "A committed JSON-LD contract definition, JSON Schema, and consumer-guide document, approved by the maintainer.",
-  "context": "The fan-out contract is the typed interface between the rights-gate and downstream Elyos projects. It must be JSON-LD so the wider commons can ingest it, idempotent so re-runs never spawn duplicate downstream tasks, and must propagate attribution, jurisdiction, and license-basis. Depends on prov-001. See PLAN.md (Solution approach section 6).",
+  "context": "The fan-out contract is the typed interface between the rights-gate and downstream Hee-Lee Oss projects. It must be JSON-LD so the wider commons can ingest it, idempotent so re-runs never spawn duplicate downstream tasks, and must propagate attribution, jurisdiction, and license-basis. Depends on prov-001. See PLAN.md (Solution approach section 6).",
   "project": "loc-public-domain-engine",
   "priority": "medium",
   "resources": [

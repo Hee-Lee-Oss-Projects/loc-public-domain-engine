@@ -6,7 +6,7 @@
   "urgent": false,
   "riskTier": "medium",
   "priority": "low",
-  "context": "Some cleared PD books in LoC's collection would benefit from a high-quality OCR pass to produce machine-readable text for translation and structured data work. This is a funded-lane task running via packages/runner against donor funds, with a hard per-task budget cap that must never be exceeded. The donated lane never runs headless. Unscheduled backlog; the hard fundedBudgetUsd cap is an Elyos requirement for funded-lane tasks.",
+  "context": "Some cleared PD books in LoC's collection would benefit from a high-quality OCR pass to produce machine-readable text for translation and structured data work. This is a funded-lane task running via packages/runner against donor funds, with a hard per-task budget cap that must never be exceeded. The donated lane never runs headless. Unscheduled backlog; the hard fundedBudgetUsd cap is a Hee-Lee Oss requirement for funded-lane tasks.",
   "lane": "funded",
   "resources": [
     "https://www.loc.gov/collections/"

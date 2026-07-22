@@ -9,11 +9,11 @@
   ],
   "requestor": "jdev1977",
   "output": "A downstream adapter module (TypeScript) committed via PR, with end-to-end tests showing the downstream project receiving cleared items.",
-  "context": "The first downstream adapter wires the cleared-item fan-out contract to a real downstream Elyos project, either a11y-alttext-commons for image alt-text or a transcription lane. The adapter must propagate rights basis, jurisdiction, attribution, and share-alike obligations into the downstream intake. Depends on contract-001 and data-001. See PLAN.md (Solution approach section 7, M2 exit criterion b).",
+  "context": "The first downstream adapter wires the cleared-item fan-out contract to a real downstream Hee-Lee Oss project, either a11y-alttext-commons for image alt-text or a transcription lane. The adapter must propagate rights basis, jurisdiction, attribution, and share-alike obligations into the downstream intake. Depends on contract-001 and data-001. See PLAN.md (Solution approach section 7, M2 exit criterion b).",
   "project": "loc-public-domain-engine",
   "priority": "medium",
   "resources": [
-    "https://github.com/Elyos-Projects/a11y-alttext-commons",
+    "https://github.com/Hee-Lee-Oss-Projects/a11y-alttext-commons",
     "https://schema.org/"
   ],
   "deliverable": "pr",
@@ -32,7 +32,7 @@
   ],
   "status": "open",
   "type": "code",
-  "objective": "Build the first downstream adapter (TypeScript, agent-neutral) that translates a cleared-item JSON-LD record into a downstream Elyos project's intake format, propagating rights basis, jurisdiction, attribution, and share-alike obligations, wired so the downstream project receives correctly-attributed items.",
+  "objective": "Build the first downstream adapter (TypeScript, agent-neutral) that translates a cleared-item JSON-LD record into a downstream Hee-Lee Oss project's intake format, propagating rights basis, jurisdiction, attribution, and share-alike obligations, wired so the downstream project receives correctly-attributed items.",
   "tokenEstimate": "medium",
   "verifiedNeed": false
 }

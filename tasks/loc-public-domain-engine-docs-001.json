@@ -9,7 +9,7 @@
   ],
   "requestor": "jdev1977",
   "output": "A consumer guide document committed via PR.",
-  "context": "Downstream Elyos projects and external commons need a clear guide to consuming the fan-out contract: how to parse it, required attribution, what jurisdiction means for their use case, license basis, and share-alike obligations. Without this, downstream consumers may misuse cleared items. Depends on contract-001. See PLAN.md (M2 exit, Governance).",
+  "context": "Downstream Hee-Lee Oss projects and external commons need a clear guide to consuming the fan-out contract: how to parse it, required attribution, what jurisdiction means for their use case, license basis, and share-alike obligations. Without this, downstream consumers may misuse cleared items. Depends on contract-001. See PLAN.md (M2 exit, Governance).",
   "project": "loc-public-domain-engine",
   "priority": "medium",
   "resources": [

@@ -6,9 +6,9 @@ Itemized backlog for the LoC rights-gate + polite API protocol that fans cleared
 into downstream good-deed tasks. See [`PLAN.md`](./PLAN.md) for context, the rights gate, the polite
 protocol, and the roadmap (M0–M3).
 
-## How these tasks map to Elyos
+## How these tasks map to Hee-Lee Oss
 
-Each task below becomes an Elyos **Task JSON** validated against `packages/schema/src/schemas.ts`.
+Each task below becomes a Hee-Lee Oss **Task JSON** validated against `packages/schema/src/schemas.ts`.
 Field mapping:
 
 - **id** — stable `loc-public-domain-engine-<area>-NNN` (the table ID).
@@ -29,7 +29,7 @@ Field mapping:
 - **context / objective / acceptanceCriteria[] / resources[] / output** — per task.
 - **requestor** — `jdev1977` / beneficiary class until a named partner/steward is secured.
 - **verifiedNeed** — **`false`** while no committed external partner/steward is secured (honest; the
-  *gap* is real and internal Elyos consumers are named, but the last-mile beneficiary is TO BE SECURED).
+  *gap* is real and internal Hee-Lee Oss consumers are named, but the last-mile beneficiary is TO BE SECURED).
 - **outputLicense** — `MIT` (code), `CC0-1.0` (engine metadata: manifests, contract, vocabulary,
   ledger, docs). Downstream derivatives carry their own project's license.
 
@@ -146,7 +146,7 @@ hit-rate + zero breaches); ≥1 candidate downstream consumer/steward in convers
   - Validates against a published JSON Schema; **idempotent** and dedup-keyed by LoC item ID + content
     hash (a re-run never emits a duplicate record).
 - **loc-public-domain-engine-adapter-001**
-  - One downstream Elyos project (e.g. `a11y-alttext-commons` or a transcription lane) **consumes the
+  - One downstream Hee-Lee Oss project (e.g. `a11y-alttext-commons` or a transcription lane) **consumes the
     feed** and receives correctly-attributed, rights-cleared items.
   - Rights basis, jurisdiction, and any CC-BY-SA share-alike obligation are propagated into the
     downstream intake; high-stakes downstream content inherits that lane's expert review + "not advice".
@@ -155,7 +155,7 @@ hit-rate + zero breaches); ≥1 candidate downstream consumer/steward in convers
     re-publication; a changed rights status pulls the item from the cleared set and logs it.
 
 **M2 Definition of Done:** the JSON-LD cleared-item contract finalized + schema-validated +
-idempotent; ≥1 downstream adapter built and **one downstream Elyos project consuming the feed**;
+idempotent; ≥1 downstream adapter built and **one downstream Hee-Lee Oss project consuming the feed**;
 attribution/jurisdiction/license-basis propagated; TTL re-verification job operational.
 
 ---

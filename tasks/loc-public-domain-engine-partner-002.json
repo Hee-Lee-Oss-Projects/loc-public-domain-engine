@@ -1,11 +1,11 @@
 {
-  "context": "Per Elyos delivered means not merged: success is outcomes delivered to real beneficiaries. Without a committed downstream consumer, the engine has no last-mile delivery. Internal Elyos projects (a11y-alttext-commons, public-domain-translations) are immediate committed adopters; an external steward is the goal. Depends on partner-001. See PLAN.md (Problem and beneficiaries, M1 exit criterion g).",
+  "context": "Per Hee-Lee Oss delivered means not merged: success is outcomes delivered to real beneficiaries. Without a committed downstream consumer, the engine has no last-mile delivery. Internal Hee-Lee Oss projects (a11y-alttext-commons, public-domain-translations) are immediate committed adopters; an external steward is the goal. Depends on partner-001. See PLAN.md (Problem and beneficiaries, M1 exit criterion g).",
   "urgent": false,
   "id": "loc-public-domain-engine-partner-002",
   "acceptanceCriteria": [
     "At least one candidate downstream consumer or external steward is identified and contacted.",
     "Engagement status is recorded honestly (response/no-response/in-conversation/committed).",
-    "Internal Elyos consumer projects (a11y-alttext-commons, public-domain-translations, or similar) are formally confirmed as committed immediate adopters.",
+    "Internal Hee-Lee Oss consumer projects (a11y-alttext-commons, public-domain-translations, or similar) are formally confirmed as committed immediate adopters.",
     "The outreach and commitment document is committed as a permanent record.",
     "The document records what a committed steward would need to adopt and sustain the feed."
   ],
@@ -23,7 +23,7 @@
   "type": "research",
   "outputLicense": "CC0-1.0",
   "verifiedNeed": false,
-  "objective": "Identify and initiate engagement with at least one candidate downstream consumer or external steward; confirm internal Elyos consumers as committed adopters of the feed; document engagement status honestly.",
+  "objective": "Identify and initiate engagement with at least one candidate downstream consumer or external steward; confirm internal Hee-Lee Oss consumers as committed adopters of the feed; document engagement status honestly.",
   "status": "open",
   "riskTier": "low",
   "domain": [
