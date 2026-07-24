@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hee-lee-oss.org/schemas/loc-public-domain-engine/quarantine-ledger-v1.schema.json",
+  "title": "LoC Public-Domain Engine — Quarantine Ledger Record",
+  "description": "A record in the append-only quarantine ledger (ledger/quarantine.jsonl) documenting a single item not cleared by the rights-gate, with its exclusion reason and supporting metadata.",
+  "type": "object",
+  "required": [
+    "locId",
+    "reason",
+    "reasonMessage",
+    "collection",
+    "timestamp",
+    "jurisdiction"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "locId": {
+      "type": "string",
+      "description": "The Library of Congress item identifier (unique within LoC's system, e.g. 'sn86053018/00202191664/1903070101/0001').",
+      "minLength": 1,
+      "examples": [
+        "sn86053018/00202191664/1903070101/0001",
+        "loc.gov/resource/newspaper/sn86053018/..."
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "restricted",
+        "undetermined",
+        "needs-review",
+        "sensitive-hold"
+      ],
+      "description": "Categorical reason for quarantine: 'restricted' (access/copyright restriction), 'undetermined' (rights status unclear per LoC), 'needs-review' (borderline case requiring expert adjudication), 'sensitive-hold' (cultural/privacy screen flag)."
+    },
+    "reasonMessage": {
+      "type": "string",
+      "description": "Human-readable explanation of the exclusion, suitable for display to reviewers and external observers.",
+      "minLength": 10,
+      "examples": [
+        "Rights determination is undetermined per LoC metadata",
+        "Access is restricted due to copyright or other restrictions",
+        "Publication date present but ambiguous; requires expert review for pre-1929 eligibility",
+        "Flagged by cultural-sensitivity screen: content touches on restricted cultural material"
+      ]
+    },
+    "collection": {
+      "type": "string",
+      "description": "Name of the LoC collection or source from which the item originates (e.g., 'Chronicling America').",
+      "examples": [
+        "Chronicling America",
+        "Chronicling America - Select Hawaiian Newspapers and Guides",
+        "American Memory"
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp (UTC) indicating when the item was evaluated and recorded in the quarantine ledger.",
+      "examples": [
+        "2026-07-23T14:22:15Z"
+      ]
+    },
+    "jurisdiction": {
+      "type": "string",
+      "enum": [
+        "US",
+        "US-state",
+        "international"
+      ],
+      "description": "Jurisdictional scope of the rights determination (default 'US'). Determines applicable copyright term.",
+      "default": "US"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional contextual metadata from the LoC API response that informed the exclusion decision.",
+      "properties": {
+        "rights": {
+          "type": "string",
+          "description": "LoC 'rights' field value (e.g., a rightsstatements.org URI or internal LoC rights statement)."
+        },
+        "access_restricted": {
+          "type": "boolean",
+          "description": "LoC 'access_restricted' field; indicates item has explicit access restrictions."
+        },
+        "collection_rights": {
+          "type": "string",
+          "description": "Collection-level rights determination, if present."
+        },
+        "item_rights": {
+          "type": "string",
+          "description": "Item-level rights determination (may differ from or override collection-level)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Publication or creation date from item metadata (may be approximate or have uncertainty markers)."
+        },
+        "derivative_status": {
+          "type": "string",
+          "description": "Assessment of whether the item is a derivative work or the original (relevant for PD-by-date analysis)."
+        },
+        "sensitivity_flag": {
+          "type": "string",
+          "enum": [
+            "ethnographic-content",
+            "personal-information",
+            "cultural-material",
+            "indigenous-content",
+            "historical-documentation",
+            "human-remains"
+          ],
+          "description": "Flag applied by the cultural-sensitivity/privacy screen if 'reason' is 'sensitive-hold'."
+        },
+        "collection_identifier": {
+          "type": "string",
+          "description": "Collection identifier or name in LoC's system."
+        }
+      },
+      "additionalProperties": true
+    },
+    "reviewer_note": {
+      "type": "string",
+      "description": "Optional note added by a rights reviewer or cultural reviewer if the item is re-evaluated in a later run or during expert adjudication."
+    }
+  },
+  "examples": [
+    {
+      "locId": "sn86053018/00202191664/1903070101/0001",
+      "reason": "undetermined",
+      "reasonMessage": "Rights determination is undetermined per LoC metadata",
+      "collection": "Chronicling America",
+      "timestamp": "2026-07-23T14:22:15Z",
+      "jurisdiction": "US",
+      "metadata": {
+        "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+        "collection": "Chronicling America - Select Hawaiian Newspapers and Guides"
+      }
+    },
+    {
+      "locId": "sn85038088/00212476106/1895072301/0102",
+      "reason": "restricted",
+      "reasonMessage": "Access is restricted due to copyright or other restrictions",
+      "collection": "Chronicling America",
+      "timestamp": "2026-07-23T14:22:16Z",
+      "jurisdiction": "US",
+      "metadata": {
+        "rights": "",
+        "access_restricted": true,
+        "collection": "Chronicling America - Select Hawaiian Newspapers and Guides"
+      }
+    },
+    {
+      "locId": "sn84023146/00211100296/1923060401/0001",
+      "reason": "sensitive-hold",
+      "reasonMessage": "Flagged by cultural-sensitivity screen: material may contain sensitive ethnographic content requiring review",
+      "collection": "Chronicling America",
+      "timestamp": "2026-07-23T14:22:20Z",
+      "jurisdiction": "US",
+      "metadata": {
+        "collection": "Chronicling America - Native American content",
+        "sensitivity_flag": "ethnographic-content"
+      }
+    }
+  ]
+}

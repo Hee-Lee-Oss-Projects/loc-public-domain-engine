@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Quarantine Ledger Summary — M1 Data Run",
+  "description": "Aggregate counts of quarantined items by exclusion reason from the M1 data run. Demonstrates the rights-gate's conservative posture and transparency.",
+  "metadata": {
+    "source": "Chronicling America",
+    "source_description": "First approved high-PD source for M1 (historic newspapers, pre-dating circulation copyright)",
+    "run_date": "2026-07-23",
+    "ledger_file": "ledger/quarantine.jsonl",
+    "output_license": "CC0-1.0",
+    "pipeline_stage": "M1 — First cleared corpus + transparency",
+    "milestone_link": "See PLAN.md (Success metrics, Solution approach section 8)"
+  },
+  "summary": {
+    "total_quarantined": 30,
+    "reason_counts": {
+      "undetermined": {
+        "count": 12,
+        "percentage": 40,
+        "description": "Rights determination is undetermined per LoC metadata. These items lack an affirmative rights status in LoC's own statements and are withheld per the deny-by-default principle. Candidates for future expert review or re-evaluation if LoC metadata is updated."
+      },
+      "restricted": {
+        "count": 7,
+        "percentage": 23,
+        "description": "Access is explicitly restricted or copyright restrictions apply. These items are excluded per gate policy and are not eligible for fan-out under any circumstances without removal of the restriction by LoC."
+      },
+      "needs-review": {
+        "count": 6,
+        "percentage": 20,
+        "description": "Borderline cases requiring expert rights reviewer adjudication. Examples: publication date format ambiguity, collection-level vs. item-level rights conflicts, derivative work status unclear, pre-1929 PD-by-date cases with incomplete metadata."
+      },
+      "sensitive-hold": {
+        "count": 5,
+        "percentage": 17,
+        "description": "Items passing rights determination but flagged by the cultural-sensitivity/privacy screen. These items are held pending ethics review: Indigenous/Traditional-Knowledge materials, ethnographic content, historical documentation requiring community consultation, or potential personal information about living or recently-deceased individuals."
+      }
+    }
+  },
+  "gate_transparency_notes": [
+    "40% of quarantined items are in 'undetermined' status, demonstrating the gate's conservative approach to ambiguous rights metadata. Rather than guess or apply heuristics, the gate treats ambiguity as a requirement for human review.",
+    "23% restricted items show that LoC's own restrictions are respected and enforced; no rights determination can override an explicit access restriction.",
+    "20% needs-review cases show attention to edge cases (date ambiguity, conflicting signals) that a heuristic-based gate would resolve incorrectly.",
+    "17% sensitivity-hold cases demonstrate integration of the cultural-sensitivity screen alongside rights determination. Public domain ≠ ethically clear; flagged materials are held pending appropriate review."
+  ],
+  "data_quality_assurance": {
+    "validation": "All records validate against QUARANTINE-SCHEMA.json",
+    "append_only": true,
+    "version_controlled": true,
+    "audit_trail_present": true,
+    "individual_reviewer_sign_off_required_for_publication": true
+  },
+  "related_artifacts": [
+    {
+      "file": "ledger/quarantine.jsonl",
+      "description": "Append-only ledger of individual non-cleared items, one JSON record per line."
+    },
+    {
+      "file": "ledger/QUARANTINE-SUMMARY.md",
+      "description": "Human-readable summary of quarantine counts and gate transparency rationale."
+    },
+    {
+      "file": "ledger/QUARANTINE-SCHEMA.json",
+      "description": "JSON Schema for the quarantine-ledger record format."
+    }
+  ]
+}
