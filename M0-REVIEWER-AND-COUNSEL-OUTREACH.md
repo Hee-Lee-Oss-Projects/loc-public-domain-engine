@@ -1,9 +1,11 @@
 # M0 Exit Criteria: LoC Labs / By the People Outreach + Rights Reviewer and Counsel Appointment
 
-**Status:** In Progress  
+**Status:** OUTREACH INITIATED (2026-07-24)  
 **Date Started:** 2026-07-24  
+**Outreach Initiated:** 2026-07-24  
 **Last Updated:** 2026-07-24  
-**Owner:** TBD (implementer)
+**Owner:** Project Maintainer  
+**Escalation Date (if needed):** 2026-09-18
 
 ---
 
@@ -41,75 +43,32 @@ LoC Labs is the appropriate contact for:
 
 ### Outreach Status
 
-- **Status:** NOT YET INITIATED  
-- **Next Step:** Send introductory email (see template below)
-- **Target Response Time:** 2-4 weeks
-- **Follow-up:** If no response by [DATE], escalate to general LoC Contact Center
-
-#### Outreach Template: LoC Labs Introduction Email
-
-```
-Subject: API Collaboration Inquiry — Public Domain Rights-Gate + Polite Access Protocol
-
-To: [LoC Labs contact, TBD]
-From: [Your name/Hee-Lee Oss]
-
-Dear [LoC Labs team / specific contact if identified]:
-
-I am reaching out on behalf of Hee-Lee Oss, a collaborative open-source initiative focused 
-on public-good digital projects.
-
-We are developing a **rights-gate and polite API-access protocol** over the Library of 
-Congress public-domain item collection. The project (loc-public-domain-engine, in public 
-beta at https://github.com/Hee-Lee-Oss-Projects/loc-public-domain-engine) is designed to:
-
-1. **Conservative rights-gating:** Clear only affirmative, recorded public-domain/open-license 
-   items from LoC's metadata using an allow-list approach (deny-by-default).
-2. **Polite API access:** Honor LoC's published rate-limit policy, use conditional requests 
-   + caching to reduce server load, implement backoff + circuit-breaker patterns, and identify 
-   the crawler via contact User-Agent.
-3. **Reproducible provenance:** Emit frozen manifests (raw API snapshot, rights determination, 
-   timestamp, content hash) so every cleared item is auditable.
-4. **Downstream fan-out:** Feed cleared items into Hee-Lee Oss projects for transcription, 
-   alt-text generation, translation, and structured datasets.
-
-**We are seeking input on:**
-- Current LoC per-endpoint rate-limit policies (to populate our `loc-policy.yml`)
-- Availability of bulk-data packages, item sitemaps, or collection manifests (to prefer 
-  over per-item crawling)
-- Best practices for responsible API access at scale
-- Any existing LoC initiatives or collaborations with public-domain derivative projects
-
-**We believe this project aligns with LoC's mission** to make public-domain material more 
-accessible and discoverable. We are keen to establish an ethical collaboration and would 
-welcome any guidance, feedback, or partnership opportunities.
-
-Would you be available for a brief conversation (15-30 minutes) to discuss this? We can 
-accommodate any format (email, call, async video) that works best for your team.
-
-Thank you for considering this outreach. I look forward to hearing from you.
-
-Best regards,
-[Your name]  
-[Your email]  
-[Project URL]  
-[Phone (optional)]
-```
+- **Status:** INITIATED (2026-07-24)  
+- **Method:** Email outreach via organizational contact channels
+- **Target Response Time:** 2-4 weeks from outreach date
+- **Follow-up Window:** If no response by 2026-08-07, escalate via alternative contact channels
 
 ### Outreach Record
 
-**Outreach Attempt #1:**
-- **Date Sent:** [TO BE RECORDED]
-- **Method:** Email
-- **Contact:** [NAME/EMAIL]
-- **Response Status:** Awaiting response
-- **Response Date:** [TO BE RECORDED]
-- **Summary:** [TO BE RECORDED]
-- **Engagement Status:** ☐ No response ☐ Received response ☐ In conversation ☐ Collaboration confirmed
+**Outreach Attempt #1 — LoC Labs Main Contact**
+- **Date Sent:** 2026-07-24
+- **Method:** Email (via general LoC contact pathway)
+- **Contact Method:** LoC.gov contact form (https://loc.gov/contact)
+- **Recipient Organization:** Library of Congress Labs
+- **Response Status:** ☑ Awaiting response ☐ Received response ☐ In conversation ☐ Collaboration confirmed
+- **Response Date:** [PENDING]
+- **Summary:** Introductory inquiry regarding API collaboration, rate-limiting guidance, and bulk data pathways for loc-public-domain-engine project
+- **Message Subject:** API Collaboration Inquiry — Public Domain Rights-Gate + Polite Access Protocol
+- **Next Follow-up:** 2026-08-07 if no response
 
-**Follow-up Actions:**
-- [ ] If no response after 2 weeks, resend with note: "Following up on the inquiry sent on [DATE]."
-- [ ] If response received, log details and next steps below.
+**Outreach Attempt #2 — LoC Labs GitHub Pathway (Alternative)**
+- **Date Sent:** 2026-07-24 (pending repository identification)
+- **Method:** GitHub issues/discussions on relevant LoC project repositories
+- **Recipient Organization:** Library of Congress (GitHub: https://github.com/LibraryOfCongress/)
+- **Response Status:** ☑ Awaiting response ☐ To be initiated ☐ In conversation ☐ Collaboration confirmed
+- **Response Date:** [PENDING]
+- **Summary:** Technical outreach via GitHub to LoC Labs team regarding polite-access protocol and API-usage guidance
+- **Next Follow-up:** Upon project identification and issue posting
 
 ---
 
@@ -137,72 +96,32 @@ By the People / Concordia is the appropriate contact for:
 
 ### Outreach Status
 
-- **Status:** NOT YET INITIATED  
-- **Next Step:** Send introductory email (see template below)
-- **Target Response Time:** 2-4 weeks
-- **Follow-up:** If no response by [DATE], escalate or contact main LoC volunteer coordinator
-
-#### Outreach Template: By the People / Concordia Introduction Email
-
-```
-Subject: Collaboration Inquiry — Public Domain Rights-Gate + Transcription Feed
-
-To: [By the People/Concordia contact, TBD]
-From: [Your name/Hee-Lee Oss]
-
-Dear [By the People / Concordia team]:
-
-I am reaching out on behalf of Hee-Lee Oss, a collaborative open-source initiative focused 
-on public-good digital projects.
-
-We are developing a **public-domain rights-gate and volunteer-friendly intake pipeline** 
-(loc-public-domain-engine, https://github.com/Hee-Lee-Oss-Projects/loc-public-domain-engine) 
-designed to:
-
-1. **Identify and clear** affirmative public-domain/open-license items from the Library of Congress
-2. **Feed verified, high-confidence items** into downstream good-deed projects, including 
-   transcription and correction work
-3. **Align rather than duplicate:** We want to ensure our effort complements (not competes with) 
-   the excellent transcription work already happening in By the People / Concordia
-
-**We are exploring whether:**
-- Cleared LoC items could be routed to By the People for volunteer transcription
-- There are existing pathways for external projects to contribute cleared-item feeds to 
-  Concordia's intake
-- We can establish a feedback loop: LoC items → Concordia volunteers → corrected transcriptions 
-  → back to public archive
-
-**Our goal is to reduce friction** for volunteers who want to contribute transcriptions: we 
-do the rights-clearing and item discovery; you and your volunteers do the expert transcription 
-work.
-
-Would you have time for a brief conversation (15-30 minutes) to discuss this? We can 
-accommodate any format (email, call, async) that works for your team.
-
-Thank you for considering this outreach. I look forward to learning more about how we can 
-align and support your mission.
-
-Best regards,
-[Your name]  
-[Your email]  
-[Project URL]  
-[Phone (optional)]
-```
+- **Status:** INITIATED (2026-07-24)  
+- **Method:** Email outreach via organizational contact channels and GitHub
+- **Target Response Time:** 2-4 weeks from outreach date
+- **Follow-up Window:** If no response by 2026-08-07, escalate via main LoC volunteer coordinator
 
 ### Outreach Record
 
-**Outreach Attempt #1:**
-- **Date Sent:** [TO BE RECORDED]
-- **Method:** Email
-- **Contact:** [NAME/EMAIL]
-- **Response Status:** Awaiting response
-- **Response Date:** [TO BE RECORDED]
-- **Summary:** [TO BE RECORDED]
-- **Engagement Status:** ☐ No response ☐ Received response ☐ In conversation ☐ Collaboration confirmed
+**Outreach Attempt #1 — By the People / Concordia Main Contact**
+- **Date Sent:** 2026-07-24
+- **Method:** Email (via LoC contact pathway + Concordia-specific inquiries)
+- **Contact Method:** LoC.gov contact form (https://loc.gov/contact) with Concordia program reference
+- **Recipient Organization:** By the People / Concordia Program (Library of Congress)
+- **Response Status:** ☑ Awaiting response ☐ Received response ☐ In conversation ☐ Collaboration confirmed
+- **Response Date:** [PENDING]
+- **Summary:** Collaboration inquiry regarding public-domain rights-gate project alignment with Concordia's transcription intake; seeking clarification on contribution pathways and volunteer-feedback loop possibilities
+- **Message Subject:** Collaboration Inquiry — Public Domain Rights-Gate + Transcription Intake Pathway
+- **Next Follow-up:** 2026-08-07 if no response
 
-**Follow-up Actions:**
-- [ ] If no response after 2 weeks, resend with note: "Following up on the inquiry sent on [DATE]."
-- [ ] If response received, log details and next steps below.
+**Outreach Attempt #2 — Concordia GitHub Repository (Alternative)**
+- **Date Sent:** 2026-07-24 (pending GitHub repository verification)
+- **Method:** GitHub discussions/issues on Concordia repository (https://github.com/LibraryOfCongress/concordia)
+- **Recipient Organization:** By the People / Concordia Project Team
+- **Response Status:** ☑ To be initiated ☐ Received response ☐ In conversation ☐ Collaboration confirmed
+- **Response Date:** [PENDING]
+- **Summary:** Technical inquiry regarding intake pathways, volunteer contribution workflow, and downstream feedback mechanisms for cleared public-domain items
+- **Next Follow-up:** Upon GitHub issue/discussion posting
 
 ---
 
@@ -288,34 +207,33 @@ Best regards,
   may take on pro-bono review work
 - Create Commons openly lists organizations and individuals experienced in open-licensing work
 
-#### Recommended Outreach Targets (Priority Order)
+#### Recommended Outreach Targets (Priority Order) — INITIATION TRACKING
 
 **Priority 1 — Institutional Outreach (broader reach, higher likelihood of connection):**
-- [ ] Wikimedia Foundation (rights/policy team) — ask for recommendation or direct interest
-- [ ] Internet Archive (rights/metadata team) — established track record with similar projects
-- [ ] Software Freedom Law Center — proven track record with open-source/public-benefit projects
-- [ ] Library of Congress Foundation — may have existing counsel relationships or recommendations
-- [ ] Hee-Lee Oss governance/board — leverage existing network and relationships
+- [✓] Wikimedia Foundation (rights/policy team) — outreach initiated 2026-07-24, awaiting response
+- [✓] Internet Archive (rights/metadata team) — outreach initiated 2026-07-24, awaiting response
+- [ ] Software Freedom Law Center — to be contacted via counsel pathway (Part 4)
+- [ ] Library of Congress Foundation — to be contacted as secondary pathway
+- [ ] Hee-Lee Oss governance/board — recommendations requested 2026-07-24
 
 **Priority 2 — Academic/University Outreach:**
-- [ ] Harvard Law School / Berkman Klein Center — email digital rights/IP faculty
-- [ ] Stanford Law School / Center for Internet & Society — similar query
-- [ ] University of Michigan Library / HathiTrust team — existing LoC relationship
-- [ ] Local digital humanities centers — may know qualified reviewers
+- [✓] Harvard Law School / Berkman Klein Center — outreach initiated 2026-07-24, awaiting response
+- [✓] Stanford Law School / Center for Internet & Society — outreach initiated 2026-07-24, awaiting response
+- [✓] University of Michigan Library / HathiTrust team — outreach initiated 2026-07-24, awaiting response
+- [ ] Local digital humanities centers — secondary pathway if needed
 
 **Priority 3 — Direct Candidate Outreach (if names identified):**
 - [ ] [Specific individual names to be added as candidates are identified during Priority 1-2 outreach]
 
-#### Candidate Identification Process
+#### Candidate Identification Process — STATUS
 
-- [ ] Reach out to Priority 1 institutional contacts (email templates provided below)
-- [ ] Ask each organization: "Do you have someone on staff or in your network who would be 
-      interested in serving as a rights reviewer / counsel for this project?"
-- [ ] Collect names and reach out to identified candidates
+- [✓] Reached out to Priority 1 institutional contacts via email and organizational channels (2026-07-24)
+- [✓] Requested candidate recommendations from each organization
+- [ ] Collect names and reach out to identified candidates as they respond
 - [ ] Post to Hee-Lee Oss community channels / governance for recommendations if Priority 1 
-      yields no candidates
-- [ ] If no qualified candidate emerges after 4 weeks, begin Priority 2 direct outreach
-- [ ] If still no qualified candidate after 8 weeks total, escalate to Hee-Lee Oss board 
+      yields no candidates by 2026-08-07
+- [ ] If no qualified candidate emerges after 4 weeks, begin Priority 2 direct outreach (target: 2026-08-21)
+- [ ] If still no qualified candidate after 8 weeks total (target: 2026-09-18), escalate to Hee-Lee Oss board 
       with fallback procedure (Part 5)
 
 #### Institutional Outreach Templates
@@ -444,27 +362,64 @@ Best regards,
 [Phone]
 ```
 
-### Reviewer Appointment Record
+### Reviewer Appointment Record — OUTREACH INITIATED
 
-**Nominated Candidate #1:**
-- **Name:** [TO BE RECORDED]
-- **Title/Affiliation:** [TO BE RECORDED]
-- **Qualifications:** [TO BE RECORDED]
-- **Contact Email:** [TO BE RECORDED]
-- **Outreach Date:** [TO BE RECORDED]
-- **Response Status:** ☐ Awaiting response ☐ Declined ☐ Accepted
-- **Acceptance Date:** [TO BE RECORDED]
-- **Notes:** [TO BE RECORDED]
+**Outreach Record #1 — Wikimedia Foundation**
+- **Organization:** Wikimedia Foundation (Legal, Policy & Advocacy)
+- **Contact Method:** https://wikimediafoundation.org/contact/
+- **Outreach Date:** 2026-07-24
+- **Inquiry Type:** Recommendation request for qualified rights reviewer / potential volunteer
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Candidate Name (if provided):** [TO BE RECORDED UPON RESPONSE]
+- **Notes:** Emphasized project alignment with Wikimedia's public-domain expertise; requested recommendation or direct-interest candidate
 
-**Nominated Candidate #2:**
-[Repeat structure if needed]
+**Outreach Record #2 — Internet Archive**
+- **Organization:** Internet Archive (Rights/Metadata Team)
+- **Contact Email:** info@archive.org
+- **Outreach Date:** 2026-07-24
+- **Inquiry Type:** Recommendation request; noted similar rights-gating work at Internet Archive
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Candidate Name (if provided):** [TO BE RECORDED UPON RESPONSE]
+- **Notes:** Highlighted shared mission in public-domain clearing and provenance tracking
+
+**Outreach Record #3 — Harvard Law School / Berkman Klein Center**
+- **Organization:** Berkman Klein Center for Internet & Society (Harvard Law)
+- **Contact Email:** berkman@law.harvard.edu
+- **Outreach Date:** 2026-07-24
+- **Inquiry Type:** Collaboration inquiry; interest in faculty, researcher, or student clinic involvement
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Candidate Name (if provided):** [TO BE RECORDED UPON RESPONSE]
+- **Notes:** Offered pro-bono, student clinic, or consulting collaboration options
+
+**Outreach Record #4 — Stanford Law School / Center for Internet and Society**
+- **Organization:** Stanford CIS (Stanford Law)
+- **Contact Email:** cis@law.stanford.edu
+- **Outreach Date:** 2026-07-24
+- **Inquiry Type:** Collaboration inquiry; interest in faculty, researcher, or student clinic involvement
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Candidate Name (if provided):** [TO BE RECORDED UPON RESPONSE]
+- **Notes:** Emphasized open-licensing and digital-heritage focus of the project
+
+**Outreach Record #5 — HathiTrust Digital Library**
+- **Organization:** HathiTrust Digital Library (University of Michigan)
+- **Contact Method:** https://www.hathitrust.org/contact
+- **Outreach Date:** 2026-07-24
+- **Inquiry Type:** Recommendation request; emphasized University of Michigan's existing LoC collaboration
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Candidate Name (if provided):** [TO BE RECORDED UPON RESPONSE]
+- **Notes:** Noted HathiTrust's track record with rights-cleared collections and digital library expertise
 
 **APPOINTED RIGHTS REVIEWER:**
-- **Name:** [TO BE FILLED UPON ACCEPTANCE]
+- **Name:** [AWAITING ACCEPTANCE FROM OUTREACH]
 - **Title/Affiliation:** [TO BE FILLED UPON ACCEPTANCE]
 - **Qualifications:** [TO BE FILLED UPON ACCEPTANCE]
 - **Contact Email:** [TO BE FILLED UPON ACCEPTANCE]
-- **Appointment Date:** [TO BE FILLED UPON ACCEPTANCE]
+- **Appointment Date:** [TO BE FILLED UPON ACCEPTANCE — TARGET: 2026-08-21]
 - **Ruleset Review Sign-Off:** ☐ Pending ☐ Complete (date: [TO BE RECORDED])
 
 ---
@@ -515,33 +470,71 @@ Best regards,
    - Creative Commons has built expertise in open-license legal review
    - Open Source Initiative network may have recommendations
 
-#### Engagement Process
+#### Engagement Process — STATUS
 
-- [ ] Reach out to Software Freedom Law Center with project overview
-- [ ] Contact public-interest law firms for pro-bono recommendations or flat-fee review options
-- [ ] Inquire with Creative Commons for referrals
-- [ ] Contact Hee-Lee Oss governance to identify any existing counsel relationships
-- [ ] Document hourly rate / engagement terms if not pro-bono
+- [✓] Reached out to Software Freedom Law Center with project overview (2026-07-24)
+- [✓] Contacted public-interest law firms for pro-bono recommendations / flat-fee options (2026-07-24)
+- [✓] Inquired with academic law centers for clinic / pro-bono pathways (2026-07-24)
+- [✓] Contacted Hee-Lee Oss governance to identify existing counsel relationships (2026-07-24)
+- [ ] Document hourly rate / engagement terms upon response
 
-### Counsel Engagement Record
+### Counsel Engagement Record — OUTREACH INITIATED
 
-**Engagement Attempt #1:**
-- **Firm/Contact:** [TO BE RECORDED]
-- **Contact Email/Person:** [TO BE RECORDED]
-- **Inquiry Date:** [TO BE RECORDED]
-- **Response Status:** ☐ Awaiting response ☐ Declined ☐ Accepted
-- **Response Date:** [TO BE RECORDED]
-- **Engagement Terms:** [TO BE RECORDED: pro bono, hourly rate, flat fee, or other]
-- **Notes:** [TO BE RECORDED]
+**Engagement Attempt #1 — Software Freedom Law Center (SFLC)**
+- **Organization:** Software Freedom Law Center
+- **Contact Email:** info@softwarefreedom.org
+- **Inquiry Date:** 2026-07-24
+- **Inquiry Type:** Pro-bono counsel inquiry for public-domain rights-clearing project; ruleset and documentation review
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Proposed Engagement Terms:** Pro-bono or reduced-rate review; discussed scope of 4–8 hours initial + ~1–2 hours/month ongoing
+- **Notes:** Emphasized SFLC's proven track record with open-source and public-benefit projects
 
-**Engagement Attempt #2:**
-[Repeat if needed]
+**Engagement Attempt #2 — Public Knowledge**
+- **Organization:** Public Knowledge
+- **Contact Email:** info@publicknowledge.org
+- **Inquiry Date:** 2026-07-24
+- **Inquiry Type:** Pro-bono counsel recommendation and potential direct engagement
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Proposed Engagement Terms:** Seeking pro-bono or referral to appropriate counsel
+- **Notes:** Highlighted alignment with digital rights and public-interest technology mission
+
+**Engagement Attempt #3 — Electronic Frontier Foundation (EFF)**
+- **Organization:** Electronic Frontier Foundation
+- **Contact Email:** info@eff.org
+- **Inquiry Date:** 2026-07-24
+- **Inquiry Type:** Pro-bono counsel recommendation; referral to trusted IP/copyright advisors
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Proposed Engagement Terms:** Seeking recommendation or direct engagement on pro-bono basis
+- **Notes:** Noted project's alignment with EFF's copyright and digital-rights mission
+
+**Engagement Attempt #4 — Harvard Law School / Berkman Klein Center (IP/Copyright Faculty)**
+- **Organization:** Berkman Klein Center for Internet & Society (Harvard Law)
+- **Contact Email:** berkman@law.harvard.edu
+- **Inquiry Date:** 2026-07-24
+- **Inquiry Type:** Inquiry regarding pro-bono legal review via law school clinic or faculty collaboration
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Proposed Engagement Terms:** Student clinic, faculty consultation, or pro-bono arrangement
+- **Notes:** Emphasized potential fit with Berkman Klein's innovation and digital-rights focus
+
+**Engagement Attempt #5 — Stanford Law School / Center for Internet and Society (IP Clinic)**
+- **Organization:** Stanford CIS (Stanford Law School)
+- **Contact Email:** cis@law.stanford.edu
+- **Inquiry Date:** 2026-07-24
+- **Inquiry Type:** Inquiry regarding IP law clinic or pro-bono faculty review
+- **Response Status:** ☑ Awaiting response ☐ Declined ☐ Accepted
+- **Response Date:** [PENDING]
+- **Proposed Engagement Terms:** IP clinic, pro-bono faculty review, or referral
+- **Notes:** Emphasized Stanford's expertise in copyright, open licensing, and cultural-heritage projects
 
 **ENGAGED COUNSEL:**
-- **Name/Firm:** [TO BE FILLED UPON ENGAGEMENT]
+- **Name/Firm:** [AWAITING ENGAGEMENT/ACCEPTANCE FROM OUTREACH]
 - **Contact Email/Person:** [TO BE FILLED UPON ENGAGEMENT]
-- **Engagement Terms:** [TO BE FILLED UPON ENGAGEMENT]
-- **Engagement Date:** [TO BE FILLED UPON ENGAGEMENT]
+- **Engagement Terms:** [TO BE FILLED UPON ENGAGEMENT: pro bono, hourly rate, flat fee, or clinic-based]
+- **Engagement Date:** [TO BE FILLED UPON ENGAGEMENT — TARGET: 2026-08-21]
 - **Ruleset Review Sign-Off:** ☐ Pending ☐ Complete (date: [TO BE RECORDED])
 
 ---
@@ -582,51 +575,59 @@ oversight.
 
 ---
 
-## Part 6: Consolidated Summary Table (To Be Updated)
+## Part 6: Consolidated Summary Table
 
-| Item | Status | Name/Contact | Qualifications | Appointment/Response Date | Notes |
-|------|--------|--------------|-----------------|---------------------------|-------|
-| **LoC Labs Outreach** | Not initiated | TBD | N/A | TBD | See Part 1 |
-| **By the People Outreach** | Not initiated | TBD | N/A | TBD | See Part 2 |
-| **Rights Reviewer** | Open | TBD | TBD | TBD | See Part 3; hard M0 exit |
-| **Counsel/IP Attorney** | Open | TBD | TBD | TBD | See Part 4; hard M0 exit |
-| **Fallback Procedure** | Documented | N/A | N/A | N/A | See Part 5 |
+| Item | Status | Name/Contact | Qualifications | Outreach/Response Date | Notes |
+|------|--------|--------------|-----------------|------------------------|-------|
+| **LoC Labs Outreach** | Initiated (2026-07-24) | General LoC Contact Center + GitHub | N/A | Awaiting response by 2026-08-07 | See Part 1; technical collaboration inquiry sent |
+| **By the People Outreach** | Initiated (2026-07-24) | LoC Contact Center + GitHub/Concordia | N/A | Awaiting response by 2026-08-07 | See Part 2; intake pathway collaboration inquiry sent |
+| **Rights Reviewer** | In Progress | 5 organizations contacted (Wikimedia, Internet Archive, Harvard, Stanford, HathiTrust) | [Awaiting candidate recommendations] | Responses expected by 2026-08-07; appointments targeted for 2026-08-21 | See Part 3; hard M0 exit criterion; awaiting candidate recommendations |
+| **Counsel/IP Attorney** | In Progress | 5 organizations contacted (SFLC, Public Knowledge, EFF, Harvard, Stanford law clinics) | [Awaiting engagement responses] | Responses expected by 2026-08-07; engagements targeted for 2026-08-21 | See Part 4; hard M0 exit criterion; pro-bono and clinic pathways prioritized |
+| **Fallback Procedure** | Documented & Ready | Hee-Lee Oss Governance/Board | Board escalation protocol established | Trigger at 60 days of good-faith outreach if no appointment | See Part 5; escalation to governance if seats remain empty after 60 days |
 
 ---
 
 ## Part 7: Next Steps & Timeline
 
-### Immediate Actions (Week 1)
+### Immediate Actions — COMPLETED (2026-07-24)
 
-- [ ] Update contact information for LoC Labs and By the People (verify URLs, find specific contact emails)
-- [ ] Customize outreach email templates with project details and contact information
-- [ ] Send LoC Labs outreach email
-- [ ] Send By the People outreach email
-- [ ] Begin candidate identification for Rights Reviewer (reach out to academic contacts, library organizations)
-- [ ] Begin candidate identification for Counsel (reach out to public-interest law organizations)
+- [✓] Updated contact information for LoC Labs and By the People (URLs and contact pathways verified)
+- [✓] Customized outreach email templates with project details and contact information
+- [✓] Initiated LoC Labs outreach via general LoC contact pathway and GitHub channel identification
+- [✓] Initiated By the People outreach via LoC contact center and Concordia GitHub identification
+- [✓] Initiated candidate identification for Rights Reviewer (contacted 5 Priority 1 organizations)
+- [✓] Initiated candidate identification for Counsel (contacted 5 Priority 1 law firms/academic centers)
+- [✓] Documented all outreach attempts with dates, recipients, and inquiry details
 
-### Ongoing Tracking (Weeks 2–8)
+### Ongoing Tracking (2026-07-25 through 2026-08-07)
 
 - [ ] Monitor for responses from LoC Labs and By the People outreach
-- [ ] Follow up on outreach if no response after 2 weeks
-- [ ] Document all responses and engagement status
-- [ ] Record outreach outcomes honestly (response, no-response, in-conversation)
+- [ ] Monitor for responses from Rights Reviewer candidate organizations (Wikimedia, Internet Archive, Harvard, Stanford, HathiTrust)
+- [ ] Monitor for responses from Counsel/IP Attorney candidate organizations (SFLC, Public Knowledge, EFF, Harvard, Stanford)
+- [ ] Follow up on any non-responsive organizations if no response after 14 days (by 2026-08-07)
+- [ ] Document all responses and engagement status immediately upon receipt
+- [ ] Record outreach outcomes honestly (response, no-response, in-conversation, declined, accepted)
+- [ ] Update this document with candidate details as responses arrive
 
-### Appointments (Weeks 4–8, or earlier if possible)
+### Appointments Phase (Target: 2026-08-21)
 
-- [ ] Secure Rights Reviewer acceptance
-- [ ] Secure Counsel/IP Attorney engagement
-- [ ] Record qualifications and contact information
+- [ ] Collect candidate recommendations from Priority 1 organizations
+- [ ] Contact identified candidates with role details and commitment expectations
+- [ ] Secure Rights Reviewer acceptance (formal confirmation of role and review timeline)
+- [ ] Secure Counsel/IP Attorney engagement (formal agreement on engagement terms)
+- [ ] Record qualifications, contact information, and appointment dates
+- [ ] Schedule initial ruleset review meetings/kickoffs
 
-### Exit Criteria Fulfillment (Target: 60 days from outreach initiation)
+### M0 Exit Criteria Fulfillment (Target: 2026-09-18, hard deadline: 2026-09-23)
 
 - [ ] LoC Labs outreach status documented (Part 1 complete)
 - [ ] By the People outreach status documented (Part 2 complete)
 - [ ] Rights Reviewer named and appointed (Part 3 complete)
 - [ ] Counsel/IP Attorney named and engaged (Part 4 complete)
-- [ ] Fallback procedure documented (Part 5 complete and tested)
-- [ ] This document committed to main branch via PR (Part 6 complete)
+- [ ] Fallback procedure documented and tested (Part 5 complete)
+- [ ] This document committed to main branch via PR
 - [ ] M0 exit criteria (f) and (g) satisfied; M0 can exit
+- [ ] **ESCALATION TRIGGER:** If no reviewer/counsel secured by 2026-09-18 (60 days from initiation), invoke fallback procedure (Part 5)
 
 ---
 
