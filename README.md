@@ -6,7 +6,7 @@ The Library of Congress holds millions of digitized items, a large share of them
 
 **Definition of shipped:** A cleared, provenance-tracked item pool + contributions accepted upstream (By the People / Commons).
 
-This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/HeeLeeOss/hee-lee-oss-downloads
 
 ## Plan
 - [PLAN.md](./PLAN.md) — robust enterprise plan (vision, architecture, roadmap, risks; includes an applied-improvements appendix + review sign-off)
@@ -16,7 +16,7 @@ This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it wit
 ## Contribute
 ```bash
 hee-lee-oss browse
-hee-lee-oss next --repo Hee-Lee-Oss-Projects/loc-public-domain-engine --no-fork
+hee-lee-oss next --repo HeeLeeOss/loc-public-domain-engine --no-fork
 ```
 
 ## Licensing & review
